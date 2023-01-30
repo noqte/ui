@@ -1,0 +1,160 @@
+.badge {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      border-radius: 9999px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 10px;
+      padding-right: 10px;
+      vertical-align: baseline;
+      font-size: 14.00px;
+      font-weight: 400;
+      line-height: 1.5;
+}
+
+  .badge-sm {
+      padding-left: 8px;
+      padding-right: 8px;
+      font-size: 11.67px;
+}
+
+  .badge-sm.badge-avatar {
+      padding-right: 2px;
+}
+
+  .badge-sm.badge-close-button {
+      padding-left: 2px;
+}
+
+  .badge-lg {
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+}
+
+  .badge-lg.badge-avatar {
+      padding-right: 6px;
+}
+
+  .badge-lg.badge-close-button {
+      padding-left: 6px;
+}
+
+  .badge-dot::before {
+      content: "";
+      margin-left: 6px;
+      display: block;
+      height: 6px;
+      width: 6px;
+      border-radius: 9999px;
+      background-color: currentColor;
+      opacity: 0.6;
+    }
+
+  .badge-avatar {
+      padding-right: 4px;
+}
+
+  .badge-avatar > img {
+      margin-left: 6px;
+      height: 16px;
+      width: 16px;
+      border-radius: 9999px;
+      -o-object-fit: cover;
+         object-fit: cover;
+}
+
+  .badge-icon > .icon,
+    .badge-icon > svg {
+      margin-left: 6px;
+      height: 12px;
+      width: 12px;
+      fill: currentColor;
+      opacity: 0.6;
+}
+
+  .badge-icon--left > .icon,
+      .badge-icon--left > svg {
+      order: 9999;
+      margin-left: 0px;
+      margin-right: 6px;
+}
+
+  .badge-close-button {
+      padding-left: 4px;
+}
+
+  .badge-close-button > button {
+      position: relative;
+      margin-right: 2px;
+      display: flex;
+      height: 16px;
+      width: 16px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      border-style: none;
+      background-color: rgb(29 41 57 / var(--tw-bg-opacity));
+      --tw-bg-opacity: 0;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+}
+
+  .badge-close-button > button > svg {
+      height: 12px;
+      width: 12px;
+      fill: currentColor;
+      color: currentColor;
+}
+
+  .badge-close-button > button:hover {
+      --tw-bg-opacity: 0.1;
+}
+
+  .badge-gray {
+      --tw-bg-opacity: 1;
+      background-color: rgb(242 244 247 / var(--tw-bg-opacity));
+      --tw-text-opacity: 1;
+      color: rgb(52 64 84 / var(--tw-text-opacity));
+}
+
+  .badge-primary {
+      --tw-bg-opacity: 1;
+      background-color: rgb(224 231 255 / var(--tw-bg-opacity));
+      --tw-text-opacity: 1;
+      color: rgb(67 56 202 / var(--tw-text-opacity));
+}
+
+  .badge-danger {
+      --tw-bg-opacity: 1;
+      background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+      --tw-text-opacity: 1;
+      color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+  .badge-warning {
+      --tw-bg-opacity: 1;
+      background-color: rgb(254 243 199 / var(--tw-bg-opacity));
+      --tw-text-opacity: 1;
+      color: rgb(180 83 9 / var(--tw-text-opacity));
+}
+
+  .badge-success {
+      --tw-bg-opacity: 1;
+      background-color: rgb(209 250 229 / var(--tw-bg-opacity));
+      --tw-text-opacity: 1;
+      color: rgb(4 120 87 / var(--tw-text-opacity));
+}
+
+  .badge-info {
+      --tw-bg-opacity: 1;
+      background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+      --tw-text-opacity: 1;
+      color: rgb(29 78 216 / var(--tw-text-opacity));
+}

@@ -1,0 +1,22 @@
+---
+title: Installation
+---
+
+Install `@noqte/ui` using npm.
+
+```bash copy
+npm install -D @noqte/ui
+```
+
+Add it to `tailwind.config.js`.
+
+```js showLineNumbers {7} filename="tailwind.config.js"
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [],
+  theme: {
+    extend: {},
+  },
+  plugins: [require("@noqte/ui")],
+};
+```

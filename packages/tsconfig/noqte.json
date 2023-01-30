@@ -1,0 +1,15 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Noqte",
+    "extends": "./base.json",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "ESNext",
+        "declaration": true,
+        "declarationDir": "types",
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist"
+    }
+}
