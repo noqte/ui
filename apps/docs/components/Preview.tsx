@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
 
 type Props = {
-  classes: String
-  centered: Boolean
-  children: ReactNode
+  classes?: String
+  centered?: Boolean
+  children?: ReactNode
 }
 
 const Preview = (props: Props) => {
