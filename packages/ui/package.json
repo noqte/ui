@@ -4,8 +4,10 @@
     "main": "src/index.js",
     "description": "Component library based on Tailwindcss.",
     "author": "Alireza Sarabchi <a.sarabchi@gmail.com> (https://alireza.ws)",
+    "repository": "https://github.com/noqte/ui",
     "license": "MIT",
     "publishConfig": {
+        "registry": "https://npm.pkg.github.com",
         "access": "public"
     },
     "keywords": [
