@@ -7,7 +7,6 @@
     "repository": "https://github.com/noqte/ui",
     "license": "MIT",
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com",
         "access": "public"
     },
     "keywords": [
