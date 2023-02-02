@@ -5,6 +5,7 @@ const fontSizeCalculator = require('./lib/font-size-calculator')
 const RemToPx = require('./lib/rem-to-px')
 const { extendedColors, extendedBoxShadows } = require('./extend')
 const tag = require('../dist/components/tag')
+const button = require('../dist/components/button')
 
 module.exports = plugin.withOptions(
   (options) => {
@@ -15,6 +16,7 @@ module.exports = plugin.withOptions(
       })
 
       addComponents(tag)
+      addComponents(button)
 
       RemToPx(theme('maxWidth'))
     }

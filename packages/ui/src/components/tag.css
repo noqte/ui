@@ -1,6 +1,6 @@
 .tag {
-  position: relative;
   display: inline-flex;
+  position: relative;
   align-items: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -37,9 +37,9 @@
 
   &-avatar {
     .avatar {
+      display: flex;
       height: 1.5em;
       margin-right: -0.35em;
-      display: flex;
       align-items: center;
       justify-content: center;
       aspect-ratio: 1;
@@ -77,10 +77,10 @@
 
   &-close-button {
     > button {
+      display: flex;
       position: relative;
       width: 1em;
       height: 1em;
-      display: flex;
       align-items: center;
       justify-content: center;
       border-radius: theme(borderRadius.full);
