@@ -22,8 +22,20 @@
   transition-duration: theme(transitionDuration.200);
   -webkit-tap-highlight-color: transparent;
 
-  &:hover {
-    box-shadow: theme(boxShadow.n-md);
+  &:focus {
+    outline: none;
+  }
+
+  &:where(:not(:active)):focus-visible {
+    @apply ring-1 ring-offset-4 ring-n-blue-500 shadow-n-md;
+  }
+
+  &:focus-visible:active {
+    @apply ring-0 shadow-n-md ring-offset-0;
+  }
+
+  &:where(:not(:active)):hover {
+    @apply ring-4 ring-offset-0 shadow-n-md;
   }
 
   & > .icon {
@@ -49,9 +61,18 @@
     background-color: theme(colors.n-blue.600);
     border-color: theme(colors.n-blue.600);
 
+    &:focus,
     &:hover {
       background-color: theme(colors.n-blue.700);
       border-color: theme(colors.n-blue.700);
+    }
+
+    &:where(:not(:active)):focus-visible {
+      @apply ring-offset-n-blue-25;
+    }
+
+    &:where(:not(:active)):hover {
+      @apply ring-n-blue-50;
     }
   }
 
@@ -60,9 +81,18 @@
     background-color: theme(colors.white);
     border-color: theme(colors.n-gray.200);
 
+    &:focus,
     &:hover {
       background-color: theme(colors.n-gray.50);
       border-color: theme(colors.n-gray.300);
+    }
+
+    &:where(:not(:active)):focus-visible {
+      @apply ring-offset-n-gray-50;
+    }
+
+    &:where(:not(:active)):hover {
+      @apply ring-n-gray-100;
     }
   }
 
