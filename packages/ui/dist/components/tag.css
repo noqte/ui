@@ -4,108 +4,87 @@
   align-items: center;
   white-space: nowrap;
   vertical-align: baseline;
+  gap: 1ch;
+  padding-inline: 1ch;
+  padding-block: 0.45ch;
   font-weight: 400;
   line-height: 1.5;
   font-size: 14.00px;
   border-radius: 0.25rem;
-  gap: 1ch;
-  padding-inline: 1ch;
-  padding-block: 0.45ch;
 }
 
   .tag-sm {
     font-size: 11.67px;
-    padding-inline: 0.75ch;
-    padding-block: 0.35ch;
   }
 
   .tag-md {
     font-size: 14.00px;
-    padding-inline: 1ch;
-    padding-block: 0.45ch;
   }
 
   .tag-lg {
     font-size: 16.80px;
-    padding-inline: 1.65ch;
-    padding-block: 0.8ch;
   }
 
   .tag-dot::before {
-      content: '';
       display: block;
-      height: 6px;
-      width: 6px;
+      content: '';
+      width: 0.75ch;
+      height: 0.75ch;
       border-radius: 9999px;
       background-color: currentColor;
       opacity: 0.6;
     }
 
-  .tag-avatar .avatar {
+  .tag-avatar > .avatar {
       display: flex;
-      height: 1.5em;
-      margin-right: -0.35em;
+      width: 2ch;
+      height: 2ch;
       align-items: center;
       justify-content: center;
-      aspect-ratio: 1;
+      border-radius: 9999px;
+      overflow: hidden;
     }
 
-  .tag-sm.tag-avatar .avatar {
-        margin-right: -0.25em;
-      }
-
-  .tag-md.tag-avatar .avatar {
-        margin-right: -0.35em;
-      }
-
-  .tag-lg.tag-avatar .avatar {
-        margin-right: -0.5em;
-      }
-
-  .tag-avatar .avatar > img {
+  .tag-avatar > .avatar > img {
         width: 100%;
         height: 100%;
-        border-radius: 9999px;
         -o-object-fit: cover;
            object-fit: cover;
       }
 
   .tag-icon > .icon,
     .tag-icon > svg {
-      width: 1em;
-      height: 1em;
-      fill: currentColor;
+      width: 2ch;
+      height: 2ch;
       opacity: 0.6;
     }
 
   .tag-close-button > button {
       display: flex;
       position: relative;
-      width: 1em;
-      height: 1em;
+      width: 2ch;
+      height: 2ch;
       align-items: center;
       justify-content: center;
-      border-radius: 9999px;
       border-style: none;
-      background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-      --tw-bg-opacity: 0;
+      background: rgb(255 255 255 / 0.2);
+      background-blend-mode: overlay;
+      border-radius: 9999px;
       transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
       transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
       transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 150ms;
+      transition-duration: 200ms;
     }
 
   .tag-close-button > button > svg {
-        width: 90%;
-        height: 90%;
-        fill: currentColor;
+        width: 70%;
+        height: 70%;
         color: currentColor;
       }
 
   .tag-close-button > button:hover {
-  --tw-bg-opacity: 0.5;
-}
+        background: rgb(255 255 255 / 0.5);
+      }
 
   .tag-gray {
   --tw-bg-opacity: 1;

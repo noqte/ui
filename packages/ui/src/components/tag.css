@@ -4,62 +4,49 @@
   align-items: center;
   white-space: nowrap;
   vertical-align: baseline;
+  gap: 1ch;
+  padding-inline: 1ch;
+  padding-block: 0.45ch;
   font-weight: theme(fontWeight.normal);
   line-height: theme(lineHeight.normal);
   font-size: theme(fontSize.base);
   border-radius: theme(borderRadius.DEFAULT);
-  gap: 1ch;
-  padding-inline: 1ch;
-  padding-block: 0.45ch;
 
   &-sm {
     font-size: theme(fontSize.sm);
-    padding-inline: 0.75ch;
-    padding-block: 0.35ch;
   }
   &-md {
     font-size: theme(fontSize.base);
-    padding-inline: 1ch;
-    padding-block: 0.45ch;
   }
   &-lg {
     font-size: theme(fontSize.lg);
-    padding-inline: 1.65ch;
-    padding-block: 0.8ch;
   }
 
   &-dot {
     &::before {
+      display: block;
       content: '';
-      @apply w-1.5 h-1.5 block rounded-full bg-current opacity-60;
+      width: 0.75ch;
+      height: 0.75ch;
+      border-radius: theme(borderRadius.full);
+      background-color: currentColor;
+      opacity: 0.6;
     }
   }
 
   &-avatar {
-    .avatar {
+    > .avatar {
       display: flex;
-      height: 1.5em;
-      margin-right: -0.35em;
+      width: 2ch;
+      height: 2ch;
       align-items: center;
       justify-content: center;
-      aspect-ratio: 1;
-
-      .tag-sm& {
-        margin-right: -0.25em;
-      }
-
-      .tag-md& {
-        margin-right: -0.35em;
-      }
-
-      .tag-lg& {
-        margin-right: -0.5em;
-      }
+      border-radius: theme(borderRadius.full);
+      overflow: hidden;
 
       > img {
         width: 100%;
         height: 100%;
-        border-radius: theme(borderRadius.full);
         object-fit: cover;
       }
     }
@@ -68,9 +55,8 @@
   &-icon {
     > .icon,
     > svg {
-      width: 1em;
-      height: 1em;
-      fill: currentColor;
+      width: 2ch;
+      height: 2ch;
       opacity: 0.6;
     }
   }
@@ -79,23 +65,25 @@
     > button {
       display: flex;
       position: relative;
-      width: 1em;
-      height: 1em;
+      width: 2ch;
+      height: 2ch;
       align-items: center;
       justify-content: center;
-      border-radius: theme(borderRadius.full);
       border-style: none;
-      @apply bg-white transition bg-opacity-0;
+      background: theme(backgroundColor.white / 0.2);
+      background-blend-mode: overlay;
+      border-radius: theme(borderRadius.full);
+      transition-property: theme(transitionProperty.DEFAULT);
+      transition-duration: theme(transitionDuration.200);
 
       > svg {
-        width: 90%;
-        height: 90%;
-        fill: currentColor;
+        width: 70%;
+        height: 70%;
         color: currentColor;
       }
 
       &:hover {
-        @apply bg-opacity-50;
+        background: theme(backgroundColor.white / 0.5);
       }
     }
   }
