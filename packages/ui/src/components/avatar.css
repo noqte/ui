@@ -1,0 +1,46 @@
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  overflow: hidden;
+  user-select: none;
+  flex-shrink: 0;
+  border-radius: theme(borderRadius.md);
+  width: theme(spacing.12);
+  height: theme(spacing.12);
+  background-color: theme(colors.n-gray.200);
+  color: theme(colors.n-gray.800);
+  font-weight: theme(fontWeight.semibold);
+  overflow: hidden;
+  line-height: 1;
+  text-transform: uppercase;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  &-xs {
+    width: theme(spacing.6);
+    height: theme(spacing.6);
+  }
+  &-sm {
+    width: theme(spacing.8);
+    height: theme(spacing.8);
+  }
+  &-md {
+    width: theme(spacing.12);
+    height: theme(spacing.12);
+  }
+  &-lg {
+    width: theme(spacing.16);
+    height: theme(spacing.16);
+  }
+  &-xl {
+    width: theme(spacing.24);
+    height: theme(spacing.24);
+  }
+}

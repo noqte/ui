@@ -6,6 +6,7 @@ const RemToPx = require('./lib/rem-to-px')
 const { extendedColors, extendedBoxShadows } = require('./extend')
 const tag = require('../dist/components/tag')
 const button = require('../dist/components/button')
+const avatar = require('../dist/components/avatar')
 
 module.exports = plugin.withOptions(
   (options) => {
@@ -17,6 +18,7 @@ module.exports = plugin.withOptions(
 
       addComponents(tag)
       addComponents(button)
+      addComponents(avatar)
 
       RemToPx(theme('maxWidth'))
     }
