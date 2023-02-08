@@ -88,6 +88,7 @@ importers:
       npm-watch: ^0.11.0
       postcss: ^8.4.21
       postcss-cli: ^10.1.0
+      postcss-hexrgba: ^2.1.0
       postcss-import: ^15.1.0
       postcss-js: ^4.0.0
       prejss-cli: ^0.3.3
@@ -103,6 +104,7 @@ importers:
       eslint-config-custom: link:../eslint-config-custom
       npm-watch: 0.11.0
       postcss-cli: 10.1.0_postcss@8.4.21
+      postcss-hexrgba: 2.1.0_postcss@8.4.21
       postcss-import: 15.1.0_postcss@8.4.21
       postcss-js: 4.0.0_postcss@8.4.21
       prejss-cli: 0.3.3
@@ -3775,6 +3777,15 @@ packages:
       yargs: 17.6.2
     transitivePeerDependencies:
       - ts-node
+    dev: true
+
+  /postcss-hexrgba/2.1.0_postcss@8.4.21:
+    resolution: {integrity: sha512-Bb8Ca/vTI/X2Pgq1O3VhOdXE0rg/hz6161MHMu93ebePw8d/I9GSOc+wbd151OGGxSyTz+z196tFeEpSafrJfA==}
+    peerDependencies:
+      postcss: ^8.1.4
+    dependencies:
+      postcss: 8.4.21
+      postcss-value-parser: 4.2.0
     dev: true
 
   /postcss-import/14.1.0_postcss@8.4.21:
