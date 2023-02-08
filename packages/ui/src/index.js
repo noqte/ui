@@ -7,6 +7,7 @@ const { extendedColors, extendedBoxShadows } = require('./extend')
 const tag = require('../dist/components/tag')
 const button = require('../dist/components/button')
 const avatar = require('../dist/components/avatar')
+const tooltip = require('../dist/components/tooltip')
 
 module.exports = plugin.withOptions(
   (options) => {
@@ -19,6 +20,7 @@ module.exports = plugin.withOptions(
       addComponents(tag)
       addComponents(button)
       addComponents(avatar)
+      addComponents(tooltip)
 
       RemToPx(theme('maxWidth'))
     }
