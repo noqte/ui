@@ -16,7 +16,7 @@ title: Buttons
 
 ## Tags
 
-<Preview centered classes="gap-4">
+<Preview centered classes="gap-6">
   <button class="btn btn-secondary">دکمه معمولی</button>
   <a href="#" class="btn btn-secondary">دکمه لینک</a>
   <input class="btn btn-secondary" type="button" value="دکمه اینپوت" />
@@ -28,19 +28,18 @@ title: Buttons
 
 ## Types
 
-<Preview centered classes="gap-4">
+<Preview centered classes="gap-6">
   <button class="btn btn-primary">کلیک کنید</button>
   <button class="btn btn-secondary">کلیک کنید</button>
 </Preview>
 
 ```html
-<button class="btn btn-primary">...</button>
-<button class="btn btn-secondary">...</button>
+<button class="btn btn-primary">...</button> <button class="btn btn-secondary">...</button>
 ```
 
 ## Sizes
 
-<Preview centered classes="gap-4">
+<Preview centered classes="gap-6">
   <button class="btn btn-xs btn-primary">کلیک کنید</button>
   <button class="btn btn-sm btn-primary">کلیک کنید</button>
   <button class="btn btn-md btn-primary">کلیک کنید</button>
@@ -56,7 +55,7 @@ title: Buttons
 
 ## With Icon
 
-<Preview centered classes="gap-4">
+<Preview centered classes="gap-6">
   <button class="btn btn-xs btn-primary">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +135,7 @@ title: Buttons
 
 ## Disabled
 
-<Preview centered classes="gap-4">
+<Preview centered classes="gap-6">
   <button class="btn btn-primary" disabled="disabled">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -162,8 +161,8 @@ title: Buttons
 
 ## Loading
 
-<Preview centered classes="gap-4">
-  <button class="btn btn-primary" loading="true">
+<Preview centered classes="gap-6">
+  <button class="btn btn-primary btn-loading">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="icon"
@@ -184,4 +183,55 @@ title: Buttons
 
 ```html
 <button class="btn btn-primary btn-loading">...</button>
+```
+
+## Icon Only
+
+<Preview centered classes="gap-6">
+  <button class="btn btn-primary btn-icon-only">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
+    </svg>
+  </button>
+  <button class="btn btn-secondary btn-icon-only">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
+    </svg>
+  </button>
+  <button class="btn btn-secondary btn-icon-only btn-loading">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
+    </svg>
+  </button>
+</Preview>
+
+```html
+<button class="btn btn-primary btn-icon-only">...</button>
 ```
