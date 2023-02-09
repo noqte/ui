@@ -1,0 +1,127 @@
+.input-field {
+  display: block;
+  background-color: theme(colors.white);
+  border: 1px solid theme(colors.n-gray.300);
+  border-radius: theme(borderRadius.DEFAULT);
+  box-shadow: theme(boxShadow.n-sm);
+  padding-inline: 1.5ch;
+  padding-block: 0.75ch;
+  appearance: none;
+  background-clip: padding-box;
+  line-height: theme(lineHeight.normal);
+  width: 100%;
+  font-size: theme(fontSize.base);
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: theme(colors.n-gray.50);
+    box-shadow: none;
+  }
+
+  &:focus-visible,
+  &:focus {
+    border-color: theme(colors.n-blue.300);
+    @apply ring ring-n-blue-300 ring-opacity-20 ring-offset-n-blue-300/10;
+  }
+
+  &-xs {
+    font-size: theme(fontSize.xs);
+  }
+  &-sm {
+    font-size: theme(fontSize.sm);
+  }
+  &-md {
+    font-size: theme(fontSize.base);
+  }
+  &-lg {
+    font-size: theme(fontSize.lg);
+  }
+  &-xl {
+    font-size: theme(fontSize.xl);
+  }
+
+  &-plaintext {
+    padding-inline: 0;
+    border-color: transparent;
+    box-shadow: none;
+
+    &:focus-visible,
+    &:focus {
+      border-color: transparent;
+      @apply ring-offset-0 ring-0;
+    }
+  }
+}
+
+.input-addon {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: theme(borderRadius.DEFAULT);
+  border: 1px solid theme(colors.n-gray.300);
+  padding-inline: 1.5ch;
+  padding-block: 0.75ch;
+  background-color: theme(colors.n-gray.50);
+  line-height: theme(lineHeight.normal);
+  font-size: theme(fontSize.base);
+}
+
+.input-group {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  box-shadow: theme(boxShadow.n-sm);
+  border-radius: theme(borderRadius.DEFAULT);
+  @apply space-x-reverse -space-x-px;
+
+  * {
+    @apply last:rounded-l first:rounded-r rounded-none;
+  }
+
+  &-xs {
+    & .input-field,
+    & .input-addon {
+      font-size: theme(fontSize.xs);
+    }
+  }
+  &-sm {
+    & .input-field,
+    & .input-addon {
+      font-size: theme(fontSize.sm);
+    }
+  }
+  &-md {
+    & .input-field,
+    & .input-addon {
+      font-size: theme(fontSize.base);
+    }
+  }
+  &-lg {
+    & .input-field,
+    & .input-addon {
+      font-size: theme(fontSize.lg);
+    }
+  }
+  &-xl {
+    & .input-field,
+    & .input-addon {
+      font-size: theme(fontSize.xl);
+    }
+  }
+
+  & .input-field {
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    box-shadow: none;
+
+    &:focus-visible,
+    &:focus {
+      z-index: 1;
+      @apply ring ring-n-blue-300 ring-opacity-20 ring-offset-n-blue-300/10;
+    }
+  }
+}
