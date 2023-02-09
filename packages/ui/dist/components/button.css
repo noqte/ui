@@ -1,4 +1,5 @@
 .btn {
+  --ring-width: 0px;
   display: inline-flex;
   position: relative;
   align-items: center;
@@ -57,16 +58,17 @@
     box-shadow: rgb(0, 0, 0) 0 0 0 0, rgba(255, 255, 255, 0) 0 0 0 2px,
       rgb(255, 255, 255, 0.08) 0 1px 0 0 inset, rgba(8,106,236, 0.8) 0 0 0 1px,
       rgba(0, 0, 0) 0 1px 0 0, rgba(0, 0, 0, 0.04) 0 2px 2px 0, rgba(0, 0, 0, 0.02) 0 3px 3px 0,
-      rgba(0, 0, 0, 0.01) 0 4px 4px 0, rgba(106,178,254, 0.4) 0 0 0 0;
+      rgba(0, 0, 0, 0.01) 0 4px 4px 0, rgba(106,178,254, 0.4) 0 0 0 var(--ring-width);
   }
 
   .btn.btn-primary:focus,
     .btn.btn-primary:hover {
+      --ring-width: 4px;
       background-color: #0058D8;
-      box-shadow: rgb(0, 0, 0) 0 0 0 0, rgba(255, 255, 255, 0) 0 0 0 2px,
-        rgb(255, 255, 255, 0.08) 0 1px 0 0 inset, rgba(8,106,236, 0.8) 0 0 0 1px,
-        rgba(0, 0, 0) 0 1px 0 0, rgba(0, 0, 0, 0.04) 0 2px 2px 0, rgba(0, 0, 0, 0.02) 0 3px 3px 0,
-        rgba(0, 0, 0, 0.01) 0 4px 4px 0, rgba(106,178,254, 0.4) 0 0 0 4px;
+    }
+
+  .btn.btn-primary:active {
+      --ring-width: 0px;
     }
 
   .btn.btn-primary:where(:not(:active)):focus-visible {
@@ -82,16 +84,17 @@
       rgb(255, 255, 255) 0 1px 0 0 inset, rgba(52,64,84, 0.1) 0 0 0 1px,
       rgba(0, 0, 0, 0.08) 0 1px 0 0, rgba(0, 0, 0, 0.04) 0 2px 2px 0,
       rgba(0, 0, 0, 0.02) 0 3px 3px 0, rgba(0, 0, 0, 0.01) 0 4px 4px 0,
-      rgba(52,64,84, 0.06) 0 0 0 0;
+      rgba(52,64,84, 0.06) 0 0 0 var(--ring-width);
   }
 
   .btn.btn-secondary:focus,
     .btn.btn-secondary:hover {
-      box-shadow: rgb(255, 255, 255) 0 0 0 0, rgba(0, 0, 0, 0) 0 0 0 2px,
-        rgb(255, 255, 255) 0 1px 0 0 inset, rgba(52,64,84, 0.1) 0 0 0 1px,
-        rgba(0, 0, 0, 0.08) 0 1px 0 0, rgba(0, 0, 0, 0.04) 0 2px 2px 0,
-        rgba(0, 0, 0, 0.02) 0 3px 3px 0, rgba(0, 0, 0, 0.01) 0 4px 4px 0,
-        rgba(52,64,84, 0.06) 0 0 0 4px;
+      --ring-width: 4px;
+    }
+
+  .btn.btn-secondary:active {
+      background-color: #F9FAFB;
+      --ring-width: 0px;
     }
 
   .btn.btn-secondary:where(:not(:active)):focus-visible {
