@@ -12,6 +12,10 @@
   width: 100%;
   font-size: theme(fontSize.base);
 
+  &::placeholder {
+    color: theme(colors.n-gray.400);
+  }
+
   &:disabled {
     cursor: not-allowed;
     background-color: theme(colors.n-gray.50);
@@ -67,6 +71,73 @@
   font-size: theme(fontSize.base);
 }
 
+.input-element {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 0.75ch;
+  font-size: theme(fontSize.base);
+  z-index: 2;
+}
+
+.input-keeper {
+  background-clip: padding-box;
+  display: flex;
+  position: relative;
+  border-radius: theme(borderRadius.DEFAULT);
+
+  &:has(.input-element) {
+    & .input-field {
+      & + .input-element {
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+  &:has(.input-element ~ .input-field) {
+    & .input-field {
+      padding-inline-start: 4ch;
+    }
+  }
+  &:has(.input-field + .input-element) {
+    & .input-field {
+      padding-inline-end: 4ch;
+    }
+  }
+
+  &-rounded {
+    & .input-field {
+      border-radius: theme(borderRadius.full);
+    }
+    &:has(.input-element) {
+      & .input-element {
+        &:first-child {
+          right: 1ch;
+        }
+        &:last-child {
+          left: 1ch;
+        }
+      }
+    }
+    &:has(.input-element ~ .input-field) {
+      & .input-field {
+        padding-inline-start: 5ch;
+      }
+    }
+    &:has(.input-field + .input-element) {
+      & .input-field {
+        padding-inline-end: 5ch;
+      }
+    }
+  }
+}
+
 .input-group {
   display: flex;
   position: relative;
@@ -75,40 +146,67 @@
   width: 100%;
   box-shadow: theme(boxShadow.n-sm);
   border-radius: theme(borderRadius.DEFAULT);
+  background-clip: padding-box;
   @apply space-x-reverse -space-x-px;
 
-  * {
+  > * {
     @apply last:rounded-l first:rounded-r rounded-none;
+
+    &:last-child:has(.input-field) {
+      & .input-field {
+        @apply rounded-l;
+      }
+    }
+    &:first-child:has(.input-field) {
+      & .input-field {
+        @apply rounded-r;
+      }
+    }
   }
 
   &-xs {
     & .input-field,
+    & .input-element,
     & .input-addon {
       font-size: theme(fontSize.xs);
     }
   }
   &-sm {
     & .input-field,
+    & .input-element,
     & .input-addon {
       font-size: theme(fontSize.sm);
     }
   }
   &-md {
     & .input-field,
+    & .input-element,
     & .input-addon {
       font-size: theme(fontSize.base);
     }
   }
   &-lg {
     & .input-field,
+    & .input-element,
     & .input-addon {
       font-size: theme(fontSize.lg);
     }
   }
   &-xl {
     & .input-field,
+    & .input-element,
     & .input-addon {
       font-size: theme(fontSize.xl);
+    }
+  }
+
+  & .input-keeper {
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+
+    & .input-field {
+      border-radius: 0;
     }
   }
 
@@ -122,6 +220,50 @@
     &:focus {
       z-index: 1;
       @apply ring ring-n-blue-300 ring-opacity-20 ring-offset-n-blue-300/10;
+    }
+  }
+
+  &-rounded {
+    border-radius: theme(borderRadius.full);
+
+    > * {
+      @apply last:rounded-l-full first:rounded-r-full rounded-none;
+
+      &:last-child:has(.input-field) {
+        & .input-field {
+          @apply rounded-l-full;
+        }
+      }
+      &:first-child:has(.input-field) {
+        & .input-field {
+          @apply rounded-r-full;
+        }
+      }
+    }
+
+    &:has(.input-keeper) {
+      & .input-keeper {
+        &:has(.input-element) {
+          & .input-element {
+            &:first-child {
+              right: 1ch;
+            }
+            &:last-child {
+              left: 1ch;
+            }
+          }
+        }
+        &:has(.input-element ~ .input-field) {
+          & .input-field {
+            padding-inline-start: 5ch;
+          }
+        }
+        &:has(.input-field + .input-element) {
+          & .input-field {
+            padding-inline-end: 5ch;
+          }
+        }
+      }
     }
   }
 }

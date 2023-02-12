@@ -15,6 +15,14 @@
   font-size: 14.00px;
 }
 
+  .input-field::-moz-placeholder {
+    color: #98A2B3;
+  }
+
+  .input-field::placeholder {
+    color: #98A2B3;
+  }
+
   .input-field:disabled {
     cursor: not-allowed;
     background-color: #F9FAFB;
@@ -81,6 +89,65 @@
   font-size: 14.00px;
 }
 
+.input-element {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 0.75ch;
+  font-size: 14.00px;
+  z-index: 2;
+}
+
+.input-keeper {
+  background-clip: padding-box;
+  display: flex;
+  position: relative;
+  border-radius: 0.25rem;
+}
+
+.input-keeper:has(.input-element) .input-field + .input-element {
+        right: auto;
+        left: 0;
+      }
+
+.input-keeper:has(.input-element ~ .input-field) .input-field {
+      -webkit-padding-start: 4ch;
+              padding-inline-start: 4ch;
+    }
+
+.input-keeper:has(.input-field + .input-element) .input-field {
+      -webkit-padding-end: 4ch;
+              padding-inline-end: 4ch;
+    }
+
+.input-keeper-rounded .input-field {
+      border-radius: 9999px;
+    }
+
+.input-keeper-rounded:has(.input-element) .input-element:first-child {
+          right: 1ch;
+        }
+
+.input-keeper-rounded:has(.input-element) .input-element:last-child {
+          left: 1ch;
+        }
+
+.input-keeper-rounded:has(.input-element ~ .input-field) .input-field {
+        -webkit-padding-start: 5ch;
+                padding-inline-start: 5ch;
+      }
+
+.input-keeper-rounded:has(.input-field + .input-element) .input-field {
+        -webkit-padding-end: 5ch;
+                padding-inline-end: 5ch;
+      }
+
 .input-group {
   display: flex;
   position: relative;
@@ -89,6 +156,7 @@
   width: 100%;
   box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
   border-radius: 0.25rem;
+  background-clip: padding-box;
 }
 
 .input-group > :not([hidden]) ~ :not([hidden]) {
@@ -97,43 +165,68 @@
   --tw-space-x-reverse: 1;
 }
 
-.input-group * {
+.input-group > * {
   border-radius: 0px;
 }
 
-.input-group *:first-child {
+.input-group > *:first-child {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
 
-.input-group *:last-child {
+.input-group > *:last-child {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
 
+.input-group > *:last-child:has(.input-field) .input-field {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.input-group > *:first-child:has(.input-field) .input-field {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
 .input-group-xs .input-field,
+    .input-group-xs .input-element,
     .input-group-xs .input-addon {
       font-size: 9.722px;
     }
 
 .input-group-sm .input-field,
+    .input-group-sm .input-element,
     .input-group-sm .input-addon {
       font-size: 11.67px;
     }
 
 .input-group-md .input-field,
+    .input-group-md .input-element,
     .input-group-md .input-addon {
       font-size: 14.00px;
     }
 
 .input-group-lg .input-field,
+    .input-group-lg .input-element,
     .input-group-lg .input-addon {
       font-size: 16.80px;
     }
 
 .input-group-xl .input-field,
+    .input-group-xl .input-element,
     .input-group-xl .input-addon {
       font-size: 20.16px;
+    }
+
+.input-group .input-keeper {
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+  }
+
+.input-group .input-keeper .input-field {
+      border-radius: 0;
     }
 
 .input-group .input-field {
@@ -153,3 +246,49 @@
       --tw-ring-opacity: 0.2;
       --tw-ring-offset-color: rgb(71 158 253 / 0.1);
     }
+
+.input-group-rounded {
+    border-radius: 9999px;
+  }
+
+.input-group-rounded > * {
+  border-radius: 0px;
+}
+
+.input-group-rounded > *:first-child {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
+.input-group-rounded > *:last-child {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.input-group-rounded > *:last-child:has(.input-field) .input-field {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.input-group-rounded > *:first-child:has(.input-field) .input-field {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
+.input-group-rounded:has(.input-keeper) .input-keeper:has(.input-element) .input-element:first-child {
+              right: 1ch;
+            }
+
+.input-group-rounded:has(.input-keeper) .input-keeper:has(.input-element) .input-element:last-child {
+              left: 1ch;
+            }
+
+.input-group-rounded:has(.input-keeper) .input-keeper:has(.input-element ~ .input-field) .input-field {
+            -webkit-padding-start: 5ch;
+                    padding-inline-start: 5ch;
+          }
+
+.input-group-rounded:has(.input-keeper) .input-keeper:has(.input-field + .input-element) .input-field {
+            -webkit-padding-end: 5ch;
+                    padding-inline-end: 5ch;
+          }
