@@ -87,9 +87,9 @@
 }
 
 .input-keeper {
-  background-clip: padding-box;
   display: flex;
   position: relative;
+  background-clip: padding-box;
   border-radius: theme(borderRadius.DEFAULT);
 
   &:has(.input-element) {
@@ -243,24 +243,37 @@
 
     &:has(.input-keeper) {
       & .input-keeper {
-        &:has(.input-element) {
-          & .input-element {
-            &:first-child {
-              right: 1ch;
+        &:first-child {
+          &:has(.input-element) {
+            & .input-element {
+              &:first-child {
+                right: 1ch;
+              }
             }
-            &:last-child {
-              left: 1ch;
+          }
+          &:has(.input-element ~ .input-field) {
+            & .input-field {
+              padding-inline-start: 5ch;
+            }
+          }
+          &:has(.input-field + .input-element) {
+            & .input-field {
+              padding-inline-end: 5ch;
             }
           }
         }
-        &:has(.input-element ~ .input-field) {
-          & .input-field {
-            padding-inline-start: 5ch;
+        &:last-child {
+          &:has(.input-element) {
+            & .input-element {
+              &:last-child {
+                left: 1ch;
+              }
+            }
           }
-        }
-        &:has(.input-field + .input-element) {
-          & .input-field {
-            padding-inline-end: 5ch;
+          &:has(.input-field + .input-element) {
+            & .input-field {
+              padding-inline-end: 5ch;
+            }
           }
         }
       }

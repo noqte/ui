@@ -105,9 +105,9 @@
 }
 
 .input-keeper {
-  background-clip: padding-box;
   display: flex;
   position: relative;
+  background-clip: padding-box;
   border-radius: 0.25rem;
 }
 
@@ -275,20 +275,25 @@
   border-bottom-right-radius: 9999px;
 }
 
-.input-group-rounded:has(.input-keeper) .input-keeper:has(.input-element) .input-element:first-child {
-              right: 1ch;
+.input-group-rounded:has(.input-keeper) .input-keeper:first-child:has(.input-element) .input-element:first-child {
+                right: 1ch;
+              }
+
+.input-group-rounded:has(.input-keeper) .input-keeper:first-child:has(.input-element ~ .input-field) .input-field {
+              -webkit-padding-start: 5ch;
+                      padding-inline-start: 5ch;
             }
 
-.input-group-rounded:has(.input-keeper) .input-keeper:has(.input-element) .input-element:last-child {
-              left: 1ch;
+.input-group-rounded:has(.input-keeper) .input-keeper:first-child:has(.input-field + .input-element) .input-field {
+              -webkit-padding-end: 5ch;
+                      padding-inline-end: 5ch;
             }
 
-.input-group-rounded:has(.input-keeper) .input-keeper:has(.input-element ~ .input-field) .input-field {
-            -webkit-padding-start: 5ch;
-                    padding-inline-start: 5ch;
-          }
+.input-group-rounded:has(.input-keeper) .input-keeper:last-child:has(.input-element) .input-element:last-child {
+                left: 1ch;
+              }
 
-.input-group-rounded:has(.input-keeper) .input-keeper:has(.input-field + .input-element) .input-field {
-            -webkit-padding-end: 5ch;
-                    padding-inline-end: 5ch;
-          }
+.input-group-rounded:has(.input-keeper) .input-keeper:last-child:has(.input-field + .input-element) .input-field {
+              -webkit-padding-end: 5ch;
+                      padding-inline-end: 5ch;
+            }
