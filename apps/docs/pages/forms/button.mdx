@@ -7,7 +7,7 @@ title: Button
 ## Uasge
 
 <Preview centered>
-  <button class="btn btn-primary">کلیک کنید</button>
+  <button className="btn btn-primary">کلیک کنید</button>
 </Preview>
 
 ```html
@@ -17,33 +17,36 @@ title: Button
 ## Tags
 
 <Preview centered classes="gap-6">
-  <button class="btn btn-secondary">دکمه معمولی</button>
-  <a href="#" class="btn btn-secondary">دکمه لینک</a>
-  <input class="btn btn-secondary" type="button" value="دکمه اینپوت" />
+  <button className="btn btn-secondary">دکمه معمولی</button>
+  <a href="#" className="btn btn-secondary">دکمه لینک</a>
+  <input className="btn btn-secondary" type="button" value="دکمه اینپوت" />
 </Preview>
 
 ```html
-<button class="btn btn-primary">...</button>
+<button class="btn btn-secondary">...</button>
+<a href="#" class="btn btn-secondary">...</a>
+<input class="btn btn-secondary" type="button" value="..." />
 ```
 
 ## Types
 
 <Preview centered classes="gap-6">
-  <button class="btn btn-primary">کلیک کنید</button>
-  <button class="btn btn-secondary">کلیک کنید</button>
+  <button className="btn btn-primary">کلیک کنید</button>
+  <button className="btn btn-secondary">کلیک کنید</button>
 </Preview>
 
 ```html
-<button class="btn btn-primary">...</button> <button class="btn btn-secondary">...</button>
+<button class="btn btn-primary">...</button>
+<button class="btn btn-secondary">...</button>
 ```
 
 ## Sizes
 
 <Preview centered classes="gap-6">
-  <button class="btn btn-xs btn-primary">کلیک کنید</button>
-  <button class="btn btn-sm btn-primary">کلیک کنید</button>
-  <button class="btn btn-md btn-primary">کلیک کنید</button>
-  <button class="btn btn-lg btn-primary">کلیک کنید</button>
+  <button className="btn btn-xs btn-primary">کلیک کنید</button>
+  <button className="btn btn-sm btn-primary">کلیک کنید</button>
+  <button className="btn btn-md btn-primary">کلیک کنید</button>
+  <button className="btn btn-lg btn-primary">کلیک کنید</button>
 </Preview>
 
 ```html
@@ -56,10 +59,10 @@ title: Button
 ## With Icon
 
 <Preview centered classes="gap-6">
-  <button class="btn btn-xs btn-primary">
+  <button className="btn btn-xs btn-primary">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
@@ -73,10 +76,10 @@ title: Button
     </svg>
     <span>کلیک کنید</span>
   </button>
-  <button class="btn btn-sm btn-primary">
+  <button className="btn btn-sm btn-primary">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
@@ -90,10 +93,10 @@ title: Button
     </svg>
     <span>کلیک کنید</span>
   </button>
-  <button class="btn btn-md btn-primary">
+  <button className="btn btn-md btn-primary">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
@@ -107,10 +110,10 @@ title: Button
     </svg>
     <span>کلیک کنید</span>
   </button>
-  <button class="btn btn-lg btn-primary">
+  <button className="btn btn-lg btn-primary">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
@@ -136,10 +139,10 @@ title: Button
 ## Disabled
 
 <Preview centered classes="gap-6">
-  <button class="btn btn-primary" disabled="disabled">
+  <button className="btn btn-primary" disabled>
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
@@ -156,16 +159,16 @@ title: Button
 </Preview>
 
 ```html
-<button class="btn btn-primary" disabled="disabled">...</button>
+<button class="btn btn-primary" disabled>...</button>
 ```
 
 ## Loading
 
 <Preview centered classes="gap-6">
-  <button class="btn btn-primary btn-loading">
+  <button className="btn btn-primary btn-loading">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
@@ -188,10 +191,10 @@ title: Button
 ## Icon Only
 
 <Preview centered classes="gap-6">
-  <button class="btn btn-primary btn-icon-only">
+  <button className="btn btn-primary btn-icon-only">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
@@ -202,10 +205,10 @@ title: Button
       <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
     </svg>
   </button>
-  <button class="btn btn-secondary btn-icon-only">
+  <button className="btn btn-secondary btn-icon-only">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
@@ -216,10 +219,10 @@ title: Button
       <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
     </svg>
   </button>
-  <button class="btn btn-secondary btn-icon-only btn-loading">
+  <button className="btn btn-secondary btn-icon-only btn-loading">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"

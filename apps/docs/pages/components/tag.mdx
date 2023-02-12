@@ -7,7 +7,7 @@ title: ‌Tag
 ## Usage
 
 <Preview centered>
-  <span class="tag tag-primary">نمونه تگ</span>
+  <span className="tag tag-primary">نمونه تگ</span>
 </Preview>
 
 ```html
@@ -16,10 +16,10 @@ title: ‌Tag
 
 ## Sizes
 
-<Preview centered classes="space-x-4 space-x-reverse">
-  <span class="tag tag-sm tag-primary">نمونه تگ</span>
-  <span class="tag tag-md tag-primary">نمونه تگ</span>
-  <span class="tag tag-lg tag-primary">نمونه تگ</span>
+<Preview centered classes="gap-6">
+  <span className="tag tag-sm tag-primary">نمونه تگ</span>
+  <span className="tag tag-md tag-primary">نمونه تگ</span>
+  <span className="tag tag-lg tag-primary">نمونه تگ</span>
 </Preview>
 
 ```html
@@ -30,23 +30,28 @@ title: ‌Tag
 
 ## Colors
 
-<Preview centered classes="space-x-4 space-x-reverse">
-  <span class="tag tag-gray rounded-full">طوسی</span>
-  <span class="tag tag-primary rounded-full">اصلی</span>
-  <span class="tag tag-danger rounded-full">قرمز</span>
-  <span class="tag tag-warning rounded-full">زرد</span>
-  <span class="tag tag-success rounded-full">سبز</span>
-  <span class="tag tag-info rounded-full">آبی</span>
+<Preview centered classes="gap-6">
+  <span className="tag tag-gray rounded-full">طوسی</span>
+  <span className="tag tag-primary rounded-full">اصلی</span>
+  <span className="tag tag-danger rounded-full">قرمز</span>
+  <span className="tag tag-warning rounded-full">زرد</span>
+  <span className="tag tag-success rounded-full">سبز</span>
+  <span className="tag tag-info rounded-full">آبی</span>
 </Preview>
 
 ```html
-<span class="... rounded-full">...</span>
+<span class="... tag-gray">...</span>
+<span class="... tag-primary">...</span>
+<span class="... tag-danger">...</span>
+<span class="... tag-warning">...</span>
+<span class="... tag-success">...</span>
+<span class="... tag-info">...</span>
 ```
 
 ## Rounded
 
 <Preview centered>
-  <span class="tag tag-primary rounded-full">نمونه تگ</span>
+  <span className="tag tag-primary rounded-full">نمونه تگ</span>
 </Preview>
 
 ```html
@@ -55,10 +60,10 @@ title: ‌Tag
 
 ## with Dot
 
-<Preview centered classes="space-x-4 space-x-reverse">
-  <span class="tag tag-primary tag-dot tag-sm rounded-full">نمونه تگ</span>
-  <span class="tag tag-primary tag-dot tag-md rounded-full">نمونه تگ</span>
-  <span class="tag tag-primary tag-dot tag-lg rounded-full">نمونه تگ</span>
+<Preview centered classes="gap-6">
+  <span className="tag tag-primary tag-dot tag-sm rounded-full">نمونه تگ</span>
+  <span className="tag tag-primary tag-dot tag-md rounded-full">نمونه تگ</span>
+  <span className="tag tag-primary tag-dot tag-lg rounded-full">نمونه تگ</span>
 </Preview>
 
 ```html
@@ -67,11 +72,11 @@ title: ‌Tag
 
 ## with Icon
 
-<Preview centered classes="space-x-4 space-x-reverse">
-  <span class="tag tag-primary tag-icon tag-sm rounded-full">
+<Preview centered classes="gap-6">
+  <span className="tag tag-primary tag-icon tag-sm rounded-full">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
@@ -85,10 +90,10 @@ title: ‌Tag
     </svg>
     <span>نمونه تگ</span>
   </span>
-  <span class="tag tag-primary tag-icon tag-md rounded-full">
+  <span className="tag tag-primary tag-icon tag-md rounded-full">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
@@ -102,10 +107,10 @@ title: ‌Tag
     </svg>
     <span>نمونه تگ</span>
   </span>
-  <span class="tag tag-primary tag-icon tag-lg rounded-full">
+  <span className="tag tag-primary tag-icon tag-lg rounded-full">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon"
+      className="icon"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
@@ -130,8 +135,8 @@ title: ‌Tag
 
 ## with Close Button
 
-<Preview centered classes="space-x-4 space-x-reverse">
-  <span class="tag tag-primary tag-close-button tag-sm rounded-full">
+<Preview centered classes="gap-6">
+  <span className="tag tag-primary tag-close-button tag-sm rounded-full">
     <span>نمونه تگ</span>
     <button>
       <svg
@@ -148,7 +153,7 @@ title: ‌Tag
       </svg>
     </button>
   </span>
-  <span class="tag tag-primary tag-close-button tag-md rounded-full">
+  <span className="tag tag-primary tag-close-button tag-md rounded-full">
     <span>نمونه تگ</span>
     <button>
       <svg
@@ -165,7 +170,7 @@ title: ‌Tag
       </svg>
     </button>
   </span>
-  <span class="tag tag-primary tag-close-button tag-lg rounded-full">
+  <span className="tag tag-primary tag-close-button tag-lg rounded-full">
     <span>نمونه تگ</span>
     <button>
       <svg
@@ -195,21 +200,21 @@ title: ‌Tag
 
 ## with Avatar
 
-<Preview centered classes="space-x-4 space-x-reverse">
-  <span class="tag tag-primary tag-avatar tag-sm rounded-full">
-    <span class="avatar">
+<Preview centered classes="gap-6">
+  <span className="tag tag-primary tag-avatar tag-sm rounded-full">
+    <span className="avatar">
       <img src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg" alt="..." />
     </span>
     <span>نمونه تگ</span>
   </span>
-  <span class="tag tag-primary tag-avatar tag-md rounded-full">
-    <span class="avatar">
+  <span className="tag tag-primary tag-avatar tag-md rounded-full">
+    <span className="avatar">
       <img src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg" alt="..." />
     </span>
     <span>نمونه تگ</span>
   </span>
-  <span class="tag tag-primary tag-avatar tag-lg rounded-full">
-    <span class="avatar">
+  <span className="tag tag-primary tag-avatar tag-lg rounded-full">
+    <span className="avatar">
       <img src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg" alt="..." />
     </span>
     <span>نمونه تگ</span>

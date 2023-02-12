@@ -86,10 +86,11 @@
   z-index: 2;
 }
 
-.input-keeper {
+.input-inset {
   display: flex;
   position: relative;
   background-clip: padding-box;
+  width: 100%;
   border-radius: theme(borderRadius.DEFAULT);
 
   &:has(.input-element) {
@@ -200,7 +201,7 @@
     }
   }
 
-  & .input-keeper {
+  & .input-inset {
     flex: 1 1 auto;
     width: 1%;
     min-width: 0;
@@ -241,8 +242,8 @@
       }
     }
 
-    &:has(.input-keeper) {
-      & .input-keeper {
+    &:has(.input-inset) {
+      & .input-inset {
         &:first-child {
           &:has(.input-element) {
             & .input-element {

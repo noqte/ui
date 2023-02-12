@@ -36,19 +36,9 @@
 
   &-avatar {
     > .avatar {
-      display: flex;
       width: 2ch;
       height: 2ch;
-      align-items: center;
-      justify-content: center;
       border-radius: theme(borderRadius.full);
-      overflow: hidden;
-
-      > img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
     }
   }
 
