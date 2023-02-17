@@ -1,5 +1,6 @@
 {
     "button": "Button",
+    "button-group": "Button Group",
     "input": "Input",
     "input-inset": "Input Inset",
     "input-group": "Input Group"

@@ -1,6 +1,6 @@
 {
     "name": "@noqte/ui",
-    "version": "0.9.3",
+    "version": "0.10.0",
     "main": "src/index.js",
     "description": "Component library based on Tailwindcss.",
     "author": "Alireza Sarabchi <a.sarabchi@gmail.com> (https://alireza.ws)",
@@ -50,6 +50,6 @@
         "autoprefixer": "^10.4.13",
         "chokidar-cli": "^3.0.0",
         "postcss": "^8.4.21",
-        "tailwindcss": "^3.2.6"
+        "tailwindcss": "^3.2.7"
     }
 }

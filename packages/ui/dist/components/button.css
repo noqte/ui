@@ -145,6 +145,78 @@
               user-select: none;
     }
 
+.btn-group {
+  position: relative;
+  vertical-align: middle;
+  display: inline-flex;
+}
+
+.btn-group > .btn {
+  flex: 1 1 0%;
+}
+
+.btn-group > .btn > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(-1px * var(--tw-space-x-reverse));
+  margin-left: calc(-1px * calc(1 - var(--tw-space-x-reverse)));
+  --tw-space-x-reverse: 1;
+}
+
+.btn-group > .btn {
+  border-radius: 0px;
+}
+
+.btn-group > .btn:first-child {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.btn-group > .btn:last-child {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.btn-group > .btn:where(:focus, :hover) {
+      z-index: 10;
+    }
+
+.btn-group-vertical {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle;
+}
+
+.btn-group-vertical > .btn {
+    width: 100%;
+    flex: 1 1 0%;
+  }
+
+.btn-group-vertical > .btn > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(-1px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(-1px * var(--tw-space-y-reverse));
+  --tw-space-y-reverse: 1;
+}
+
+.btn-group-vertical > .btn {
+  border-radius: 0px;
+}
+
+.btn-group-vertical > .btn:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.btn-group-vertical > .btn:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.btn-group-vertical > .btn:where(:focus, :hover) {
+      z-index: 10;
+    }
+
 @keyframes button-loading-spinner {
   from {
     transform: rotate(0turn);
