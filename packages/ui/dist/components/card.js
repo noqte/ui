@@ -1,0 +1,1 @@
+module.exports = {".card":{"boxShadow":"rgb(255, 255, 255) 0 1px 0 0 inset, rgba(52,64,84, 0.1) 0 0 0 1px,\n    rgba(0, 0, 0, 0.08) 0 1px 0 0, rgba(0, 0, 0, 0.04) 0 2px 2px 0, rgba(0, 0, 0, 0.02) 0 3px 3px 0,\n    rgba(0, 0, 0, 0.01) 0 4px 4px 0"}};

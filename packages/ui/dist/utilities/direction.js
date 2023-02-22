@@ -1,0 +1,1 @@
+module.exports = {".rtl":{"direction":"rtl"},".ltr":{"direction":"ltr"}};
