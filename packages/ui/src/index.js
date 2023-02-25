@@ -10,6 +10,7 @@ const button = require('../dist/components/button')
 const avatar = require('../dist/components/avatar')
 const tooltip = require('../dist/components/tooltip')
 const card = require('../dist/components/card')
+const dropdown = require('../dist/components/dropdown')
 const direction = require('../dist/utilities/direction')
 
 module.exports = plugin.withOptions(
@@ -26,6 +27,7 @@ module.exports = plugin.withOptions(
       addComponents(button)
       addComponents(avatar)
       addComponents(tooltip)
+      addComponents(dropdown)
 
       addUtilities(direction)
 
