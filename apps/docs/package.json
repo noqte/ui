@@ -3,8 +3,10 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
+        "noqte:dev": "npx tailwindcss -i styles/noqte.css -o public/noqte.css --watch",
         "dev": "next dev --port 3001",
-        "build": "next build",
+        "build:noqte": "npx tailwindcss -i styles/noqte.css -o public/noqte.css --minify",
+        "build": "pnpm build:noqte && next build",
         "start": "next start",
         "lint": "next lint"
     },

@@ -1,9 +1,16 @@
+input {
+  &::placeholder {
+    color: theme(colors.n-gray.400);
+  }
+}
+
 .input-field {
+  --ring-width: 0px;
+  --border-color: rgba(theme(colors.n-gray.700), 0.1);
+  --border-shadow-color: rgba(0, 0, 0, 0.08);
   display: block;
   background-color: theme(colors.white);
-  border: 1px solid theme(colors.n-gray.300);
   border-radius: theme(borderRadius.DEFAULT);
-  box-shadow: theme(boxShadow.n-sm);
   padding-inline: 1.5ch;
   padding-block: 0.75ch;
   appearance: none;
@@ -11,6 +18,11 @@
   line-height: theme(lineHeight.normal);
   width: 100%;
   font-size: theme(fontSize.base);
+  box-shadow: var(--border-color) 0 0 0 1px, var(--border-shadow-color) 0 1px 0 0,
+    rgba(0, 0, 0, 0.04) 0 2px 2px 0, rgba(0, 0, 0, 0.02) 0 3px 3px 0,
+    rgba(0, 0, 0, 0.01) 0 4px 4px 0, rgba(theme(colors.n-blue.300), 0.2) 0 0 0 var(--ring-width);
+  transition: box-shadow 0.3s ease;
+  outline-color: transparent;
 
   &::placeholder {
     color: theme(colors.n-gray.400);
@@ -22,10 +34,14 @@
     box-shadow: none;
   }
 
-  &:focus-visible,
-  &:focus {
-    border-color: theme(colors.n-blue.300);
-    @apply ring ring-n-blue-300 ring-opacity-20 ring-offset-n-blue-300/10;
+  &:where(:focus-within, :focus) {
+    --ring-width: 4px;
+    --border-color: rgba(theme(colors.n-blue.500), 0.7);
+    --border-shadow-color: rgba(theme(colors.n-blue.500), 0.7);
+  }
+
+  &:focus-visible {
+    background: red;
   }
 
   &-xs {

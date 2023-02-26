@@ -14,7 +14,13 @@
             "outputs": []
         },
         "dev": {
-            "cache": false
-        }
+            "dependsOn": [
+                "noqte-ui-docs#noqte:dev"
+            ],
+            "cache": false,
+            "persistent": true
+        },
+        "noqte-ui-docs#noqte:dev": {},
+        "noqte-ui-docs#dev": {}
     }
 }

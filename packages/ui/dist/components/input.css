@@ -1,9 +1,18 @@
+input::-moz-placeholder {
+    color: #98A2B3;
+  }
+
+input::placeholder {
+    color: #98A2B3;
+  }
+
 .input-field {
+  --ring-width: 0px;
+  --border-color: rgba(52,64,84, 0.1);
+  --border-shadow-color: rgba(0, 0, 0, 0.08);
   display: block;
   background-color: #fff;
-  border: 1px solid #D0D5DD;
   border-radius: 0.25rem;
-  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
   padding-inline: 1.5ch;
   padding-block: 0.75ch;
   -webkit-appearance: none;
@@ -13,60 +22,64 @@
   line-height: 1.5;
   width: 100%;
   font-size: 14.00px;
+  box-shadow: var(--border-color) 0 0 0 1px, var(--border-shadow-color) 0 1px 0 0,
+    rgba(0, 0, 0, 0.04) 0 2px 2px 0, rgba(0, 0, 0, 0.02) 0 3px 3px 0,
+    rgba(0, 0, 0, 0.01) 0 4px 4px 0, rgba(71,158,253, 0.2) 0 0 0 var(--ring-width);
+  transition: box-shadow 0.3s ease;
+  outline-color: transparent;
 }
 
-  .input-field::-moz-placeholder {
+.input-field::-moz-placeholder {
     color: #98A2B3;
   }
 
-  .input-field::placeholder {
+.input-field::placeholder {
     color: #98A2B3;
   }
 
-  .input-field:disabled {
+.input-field:disabled {
     cursor: not-allowed;
     background-color: #F9FAFB;
     box-shadow: none;
   }
 
-  .input-field:focus-visible,
-  .input-field:focus {
-    border-color: #479EFD;
-    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-    --tw-ring-color: rgb(71 158 253 / var(--tw-ring-opacity));
-    --tw-ring-opacity: 0.2;
-    --tw-ring-offset-color: rgb(71 158 253 / 0.1);
+.input-field:where(:focus-within, :focus) {
+    --ring-width: 4px;
+    --border-color: rgba(23,123,246, 0.7);
+    --border-shadow-color: rgba(23,123,246, 0.7);
   }
 
-  .input-field-xs {
+.input-field:focus-visible {
+    background: red;
+  }
+
+.input-field-xs {
     font-size: 9.722px;
   }
 
-  .input-field-sm {
+.input-field-sm {
     font-size: 11.67px;
   }
 
-  .input-field-md {
+.input-field-md {
     font-size: 14.00px;
   }
 
-  .input-field-lg {
+.input-field-lg {
     font-size: 16.80px;
   }
 
-  .input-field-xl {
+.input-field-xl {
     font-size: 20.16px;
   }
 
-  .input-field-plaintext {
+.input-field-plaintext {
     padding-inline: 0;
     border-color: transparent;
     box-shadow: none;
   }
 
-  .input-field-plaintext:focus-visible,
+.input-field-plaintext:focus-visible,
     .input-field-plaintext:focus {
       border-color: transparent;
       --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
@@ -161,33 +174,33 @@
 }
 
 .input-group > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(-1px * var(--tw-space-x-reverse));
-  margin-left: calc(-1px * calc(1 - var(--tw-space-x-reverse)));
-  --tw-space-x-reverse: 1;
+    margin-right: calc(-1px * var(--tw-space-x-reverse));
+    margin-left: calc(-1px * calc(1 - var(--tw-space-x-reverse)));
+    --tw-space-x-reverse: 1;
 }
 
 .input-group > * {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 
 .input-group > *:first-child {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 }
 
 .input-group > *:last-child {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
 }
 
 .input-group > *:last-child:has(.input-field) .input-field {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
 }
 
 .input-group > *:first-child:has(.input-field) .input-field {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 }
 
 .input-group-xs .input-field,
@@ -253,27 +266,27 @@
   }
 
 .input-group-rounded > * {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 
 .input-group-rounded > *:first-child {
-  border-top-right-radius: 9999px;
-  border-bottom-right-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
 }
 
 .input-group-rounded > *:last-child {
-  border-top-left-radius: 9999px;
-  border-bottom-left-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
 }
 
 .input-group-rounded > *:last-child:has(.input-field) .input-field {
-  border-top-left-radius: 9999px;
-  border-bottom-left-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
 }
 
 .input-group-rounded > *:first-child:has(.input-field) .input-field {
-  border-top-right-radius: 9999px;
-  border-bottom-right-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
 }
 
 .input-group-rounded:has(.input-inset) .input-inset:first-child:has(.input-element) .input-element:first-child {
