@@ -13,6 +13,7 @@
   background-color: #EAECF0;
   color: #1D2939;
   font-weight: 600;
+  font-size: 14.00px;
   overflow: hidden;
   line-height: 1;
   text-transform: uppercase;
@@ -29,24 +30,29 @@
   .avatar-xs {
     width: 24px;
     height: 24px;
+    font-size: 9.722px;
   }
 
   .avatar-sm {
     width: 32px;
     height: 32px;
+    font-size: 11.67px;
   }
 
   .avatar-md {
     width: 48px;
     height: 48px;
+    font-size: 14.00px;
   }
 
   .avatar-lg {
     width: 64px;
     height: 64px;
+    font-size: 16.80px;
   }
 
   .avatar-xl {
     width: 96px;
     height: 96px;
+    font-size: 24.19px;
   }
