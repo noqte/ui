@@ -10,11 +10,13 @@ input::placeholder {
   --ring-width: 0px;
   --border-color: rgba(52,64,84, 0.1);
   --border-shadow-color: rgba(0, 0, 0, 0.08);
+  --padding-inline: 1.5ch;
+  --padding-block: 0.75ch;
   display: block;
   background-color: #fff;
   border-radius: 0.25rem;
-  padding-inline: 1.5ch;
-  padding-block: 0.75ch;
+  padding-inline: var(--padding-inline);
+  padding-block: var(--padding-block);
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -26,7 +28,7 @@ input::placeholder {
     rgba(0, 0, 0, 0.04) 0 2px 2px 0, rgba(0, 0, 0, 0.02) 0 3px 3px 0,
     rgba(0, 0, 0, 0.01) 0 4px 4px 0, rgba(71,158,253, 0.2) 0 0 0 var(--ring-width);
   transition: box-shadow 0.3s ease;
-  outline-color: transparent;
+  outline: transparent;
 }
 
 .input-field::-moz-placeholder {
@@ -37,20 +39,27 @@ input::placeholder {
     color: #98A2B3;
   }
 
-.input-field:disabled {
+.input-field:where(:disabled) {
     cursor: not-allowed;
     background-color: #F9FAFB;
-    box-shadow: none;
   }
 
-.input-field:where(:focus-within, :focus) {
+.input-field:where(:-moz-read-only) {
+    cursor: not-allowed;
+  }
+
+.input-field:where(:read-only) {
+    cursor: not-allowed;
+  }
+
+.input-field:where(:focus-within, :focus, :focus-visible) {
     --ring-width: 4px;
     --border-color: rgba(23,123,246, 0.7);
     --border-shadow-color: rgba(23,123,246, 0.7);
   }
 
-.input-field:focus-visible {
-    background: red;
+.input-field-rounded {
+    border-radius: 9999px;
   }
 
 .input-field-xs {
@@ -79,27 +88,30 @@ input::placeholder {
     box-shadow: none;
   }
 
-.input-field-plaintext:focus-visible,
-    .input-field-plaintext:focus {
+.input-field-plaintext:where(:focus-visible, :focus) {
       border-color: transparent;
-      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-      --tw-ring-offset-width: 0px;
+      box-shadow: none;
     }
 
 .input-addon {
+  --ring-width: 0px;
+  --border-color: rgba(52,64,84, 0.1);
+  --border-shadow-color: rgba(0, 0, 0, 0.08);
+  --padding-inline: 1.5ch;
+  --padding-block: 0.75ch;
   display: flex;
   align-items: center;
   white-space: nowrap;
   text-align: center;
   border-radius: 0.25rem;
-  border: 1px solid #D0D5DD;
-  padding-inline: 1.5ch;
-  padding-block: 0.75ch;
+  padding-inline: var(--padding-inline);
+  padding-block: var(--padding-block);
   background-color: #F9FAFB;
   line-height: 1.5;
   font-size: 14.00px;
+  box-shadow: var(--border-color) 0 0 0 1px, var(--border-shadow-color) 0 1px 0 0,
+    rgba(0, 0, 0, 0.04) 0 2px 2px 0, rgba(0, 0, 0, 0.02) 0 3px 3px 0,
+    rgba(0, 0, 0, 0.01) 0 4px 4px 0, rgba(71,158,253, 0.2) 0 0 0 var(--ring-width);
 }
 
 .input-element {
@@ -116,6 +128,10 @@ input::placeholder {
   font-size: 14.00px;
   z-index: 2;
 }
+
+.input-element:has(button, a) {
+    pointer-events: auto;
+  }
 
 .input-inset {
   display: flex;
@@ -168,14 +184,13 @@ input::placeholder {
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
-  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
   border-radius: 0.25rem;
   background-clip: padding-box;
 }
 
 .input-group > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(-1px * var(--tw-space-x-reverse));
-    margin-left: calc(-1px * calc(1 - var(--tw-space-x-reverse)));
+    margin-right: calc(1px * var(--tw-space-x-reverse));
+    margin-left: calc(1px * calc(1 - var(--tw-space-x-reverse)));
     --tw-space-x-reverse: 1;
 }
 
@@ -247,18 +262,13 @@ input::placeholder {
     flex: 1 1 auto;
     width: 1%;
     min-width: 0;
-    box-shadow: none;
   }
 
-.input-group .input-field:focus-visible,
-    .input-group .input-field:focus {
+.input-group .input-field:where(:focus-within, :focus, :focus-visible) {
+      --ring-width: 4px;
+      --border-color: rgba(23,123,246, 0.7);
+      --border-shadow-color: rgba(23,123,246, 0.7);
       z-index: 1;
-      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-      --tw-ring-color: rgb(71 158 253 / var(--tw-ring-opacity));
-      --tw-ring-opacity: 0.2;
-      --tw-ring-offset-color: rgb(71 158 253 / 0.1);
     }
 
 .input-group-rounded {
