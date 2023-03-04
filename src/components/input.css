@@ -35,7 +35,7 @@ input {
     background-color: theme(colors.n-gray.50);
   }
 
-  &:where(:read-only) {
+  &:where(input:read-only) {
     cursor: not-allowed;
   }
 
