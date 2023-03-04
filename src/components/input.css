@@ -187,19 +187,19 @@ input {
   width: 100%;
   border-radius: theme(borderRadius.DEFAULT);
   background-clip: padding-box;
-  @apply rtl:space-x-reverse space-x-px;
+  @apply space-x-px;
 
   > * {
-    @apply ltr:last:rounded-r ltr:first:rounded-l rtl:last:rounded-l rtl:first:rounded-r rounded-none;
+    @apply rounded-none last:rounded-l first:rounded-r;
 
     &:last-child:has(.input-field) {
       & .input-field {
-        @apply rtl:rounded-l ltr:rounded-r;
+        @apply rounded-l;
       }
     }
     &:first-child:has(.input-field) {
       & .input-field {
-        @apply rtl:rounded-r ltr:rounded-l;
+        @apply rounded-r;
       }
     }
   }
@@ -267,16 +267,16 @@ input {
     border-radius: theme(borderRadius.full);
 
     > * {
-      @apply rtl:last:rounded-l-full rtl:first:rounded-r-full ltr:last:rounded-r-full ltr:first:rounded-l-full rounded-none;
+      @apply rounded-none last:rounded-l-full first:rounded-r-full;
 
       &:last-child:has(.input-field) {
         & .input-field {
-          @apply rtl:rounded-l-full ltr:rounded-r-full;
+          @apply rounded-l-full;
         }
       }
       &:first-child:has(.input-field) {
         & .input-field {
-          @apply rtl:rounded-r-full ltr:rounded-l-full;
+          @apply rounded-r-full;
         }
       }
     }
@@ -314,6 +314,44 @@ input {
             & .input-field {
               padding-inline-end: 5ch;
             }
+          }
+        }
+      }
+    }
+  }
+
+  &:where([dir='ltr']) {
+    > * {
+      border-radius: 0 !important;
+      @apply last:!rounded-r first:!rounded-l;
+
+      &:last-child:has(.input-field) {
+        & .input-field {
+          @apply rounded-r;
+        }
+      }
+      &:first-child:has(.input-field) {
+        & .input-field {
+          @apply rounded-l;
+        }
+      }
+    }
+  }
+
+  &-rounded {
+    &:where([dir='ltr']) {
+      > * {
+        border-radius: 0 !important;
+        @apply last:!rounded-r-full first:!rounded-l-full;
+
+        &:last-child:has(.input-field) {
+          & .input-field {
+            @apply rounded-r-full;
+          }
+        }
+        &:first-child:has(.input-field) {
+          & .input-field {
+            @apply rounded-l-full;
           }
         }
       }

@@ -204,50 +204,26 @@ input::placeholder {
     margin-left: calc(1px * calc(1 - var(--tw-space-x-reverse)));
 }
 
-[dir="rtl"] .input-group > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 1;
-}
-
 .input-group > * {
     border-radius: 0px;
 }
 
-[dir="ltr"] .input-group > *:first-child {
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
-}
-
-[dir="ltr"] .input-group > *:last-child {
+.input-group > *:first-child {
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
 }
 
-[dir="rtl"] .input-group > *:first-child {
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
-}
-
-[dir="rtl"] .input-group > *:last-child {
+.input-group > *:last-child {
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
 }
 
-[dir="ltr"] .input-group > *:last-child:has(.input-field) .input-field {
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
-}
-
-[dir="rtl"] .input-group > *:last-child:has(.input-field) .input-field {
+.input-group > *:last-child:has(.input-field) .input-field {
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
 }
 
-[dir="ltr"] .input-group > *:first-child:has(.input-field) .input-field {
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
-}
-
-[dir="rtl"] .input-group > *:first-child:has(.input-field) .input-field {
+.input-group > *:first-child:has(.input-field) .input-field {
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
 }
@@ -313,42 +289,22 @@ input::placeholder {
     border-radius: 0px;
 }
 
-[dir="ltr"] .input-group-rounded > *:first-child {
-    border-top-left-radius: 9999px;
-    border-bottom-left-radius: 9999px;
-}
-
-[dir="ltr"] .input-group-rounded > *:last-child {
+.input-group-rounded > *:first-child {
     border-top-right-radius: 9999px;
     border-bottom-right-radius: 9999px;
 }
 
-[dir="rtl"] .input-group-rounded > *:first-child {
-    border-top-right-radius: 9999px;
-    border-bottom-right-radius: 9999px;
-}
-
-[dir="rtl"] .input-group-rounded > *:last-child {
+.input-group-rounded > *:last-child {
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
 }
 
-[dir="ltr"] .input-group-rounded > *:last-child:has(.input-field) .input-field {
-    border-top-right-radius: 9999px;
-    border-bottom-right-radius: 9999px;
-}
-
-[dir="rtl"] .input-group-rounded > *:last-child:has(.input-field) .input-field {
+.input-group-rounded > *:last-child:has(.input-field) .input-field {
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
 }
 
-[dir="ltr"] .input-group-rounded > *:first-child:has(.input-field) .input-field {
-    border-top-left-radius: 9999px;
-    border-bottom-left-radius: 9999px;
-}
-
-[dir="rtl"] .input-group-rounded > *:first-child:has(.input-field) .input-field {
+.input-group-rounded > *:first-child:has(.input-field) .input-field {
     border-top-right-radius: 9999px;
     border-bottom-right-radius: 9999px;
 }
@@ -375,3 +331,51 @@ input::placeholder {
               -webkit-padding-end: 5ch;
                       padding-inline-end: 5ch;
             }
+
+.input-group:where([dir='ltr']) > * {
+      border-radius: 0 !important;
+    }
+
+.input-group:where([dir='ltr']) > *:first-child {
+    border-top-left-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+}
+
+.input-group:where([dir='ltr']) > *:last-child {
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+}
+
+.input-group:where([dir='ltr']) > *:last-child:has(.input-field) .input-field {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.input-group:where([dir='ltr']) > *:first-child:has(.input-field) .input-field {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.input-group-rounded:where([dir='ltr']) > * {
+        border-radius: 0 !important;
+      }
+
+.input-group-rounded:where([dir='ltr']) > *:first-child {
+    border-top-left-radius: 9999px !important;
+    border-bottom-left-radius: 9999px !important;
+}
+
+.input-group-rounded:where([dir='ltr']) > *:last-child {
+    border-top-right-radius: 9999px !important;
+    border-bottom-right-radius: 9999px !important;
+}
+
+.input-group-rounded:where([dir='ltr']) > *:last-child:has(.input-field) .input-field {
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+}
+
+.input-group-rounded:where([dir='ltr']) > *:first-child:has(.input-field) .input-field {
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+}
