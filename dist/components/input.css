@@ -303,22 +303,42 @@ input::placeholder {
     border-radius: 0px;
 }
 
-.input-group-rounded > *:first-child {
+[dir="ltr"] .input-group-rounded > *:first-child {
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+}
+
+[dir="ltr"] .input-group-rounded > *:last-child {
     border-top-right-radius: 9999px;
     border-bottom-right-radius: 9999px;
 }
 
-.input-group-rounded > *:last-child {
+[dir="rtl"] .input-group-rounded > *:first-child {
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+}
+
+[dir="rtl"] .input-group-rounded > *:last-child {
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
 }
 
-.input-group-rounded > *:last-child:has(.input-field) .input-field {
+[dir="ltr"] .input-group-rounded > *:last-child:has(.input-field) .input-field {
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+}
+
+[dir="rtl"] .input-group-rounded > *:last-child:has(.input-field) .input-field {
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
 }
 
-.input-group-rounded > *:first-child:has(.input-field) .input-field {
+[dir="ltr"] .input-group-rounded > *:first-child:has(.input-field) .input-field {
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+}
+
+[dir="rtl"] .input-group-rounded > *:first-child:has(.input-field) .input-field {
     border-top-right-radius: 9999px;
     border-bottom-right-radius: 9999px;
 }

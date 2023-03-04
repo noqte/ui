@@ -258,16 +258,16 @@ input {
     border-radius: theme(borderRadius.full);
 
     > * {
-      @apply last:rounded-l-full first:rounded-r-full rounded-none;
+      @apply rtl:last:rounded-l-full rtl:first:rounded-r-full ltr:last:rounded-r-full ltr:first:rounded-l-full rounded-none;
 
       &:last-child:has(.input-field) {
         & .input-field {
-          @apply rounded-l-full;
+          @apply rtl:rounded-l-full ltr:rounded-r-full;
         }
       }
       &:first-child:has(.input-field) {
         & .input-field {
-          @apply rounded-r-full;
+          @apply rtl:rounded-r-full ltr:rounded-l-full;
         }
       }
     }
