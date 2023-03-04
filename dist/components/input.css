@@ -58,6 +58,16 @@ input::placeholder {
     --border-shadow-color: rgba(23,123,246, 0.7);
   }
 
+.input-field:where(select) {
+    --select-bg-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke-width='2' stroke='%23667085' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M6 9l6 6l6 -6'%3E%3C/path%3E%3C/svg%3E");
+    -webkit-padding-end: 3.75ch;
+            padding-inline-end: 3.75ch;
+    background-image: var(--select-bg-img);
+    background-repeat: no-repeat;
+    background-position: left 1.25ch center;
+    background-size: 1.5ch;
+  }
+
 .input-field-rounded {
     border-radius: 9999px;
   }
