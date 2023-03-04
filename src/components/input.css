@@ -178,19 +178,19 @@ input {
   width: 100%;
   border-radius: theme(borderRadius.DEFAULT);
   background-clip: padding-box;
-  @apply space-x-reverse space-x-px;
+  @apply rtl:space-x-reverse space-x-px;
 
   > * {
-    @apply last:rounded-l first:rounded-r rounded-none;
+    @apply ltr:last:rounded-r ltr:first:rounded-l rtl:last:rounded-l rtl:first:rounded-r rounded-none;
 
     &:last-child:has(.input-field) {
       & .input-field {
-        @apply rounded-l;
+        @apply rtl:rounded-l ltr:rounded-r;
       }
     }
     &:first-child:has(.input-field) {
       & .input-field {
-        @apply rounded-r;
+        @apply rtl:rounded-r ltr:rounded-l;
       }
     }
   }

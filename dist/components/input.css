@@ -189,8 +189,12 @@ input::placeholder {
 }
 
 .input-group > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
     margin-right: calc(1px * var(--tw-space-x-reverse));
     margin-left: calc(1px * calc(1 - var(--tw-space-x-reverse)));
+}
+
+[dir="rtl"] .input-group > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 1;
 }
 
@@ -198,22 +202,42 @@ input::placeholder {
     border-radius: 0px;
 }
 
-.input-group > *:first-child {
+[dir="ltr"] .input-group > *:first-child {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+[dir="ltr"] .input-group > *:last-child {
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
 }
 
-.input-group > *:last-child {
+[dir="rtl"] .input-group > *:first-child {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+[dir="rtl"] .input-group > *:last-child {
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
 }
 
-.input-group > *:last-child:has(.input-field) .input-field {
+[dir="ltr"] .input-group > *:last-child:has(.input-field) .input-field {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+[dir="rtl"] .input-group > *:last-child:has(.input-field) .input-field {
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
 }
 
-.input-group > *:first-child:has(.input-field) .input-field {
+[dir="ltr"] .input-group > *:first-child:has(.input-field) .input-field {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+[dir="rtl"] .input-group > *:first-child:has(.input-field) .input-field {
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
 }
