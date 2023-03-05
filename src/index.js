@@ -11,6 +11,7 @@ const avatar = require('../dist/components/avatar')
 const tooltip = require('../dist/components/tooltip')
 const card = require('../dist/components/card')
 const dropdown = require('../dist/components/dropdown')
+const table = require('../dist/components/table')
 const direction = require('../dist/utilities/direction')
 
 module.exports = plugin.withOptions(
@@ -28,6 +29,7 @@ module.exports = plugin.withOptions(
       addComponents(avatar)
       addComponents(tooltip)
       addComponents(dropdown)
+      addComponents(table)
 
       addUtilities(direction)
 
