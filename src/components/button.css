@@ -43,6 +43,9 @@
   &-lg {
     font-size: theme(fontSize.lg);
   }
+  &-xl {
+    font-size: theme(fontSize.xl);
+  }
 
   &.btn-primary {
     color: theme(colors.white);

@@ -52,6 +52,10 @@
     font-size: 16.80px;
   }
 
+  .btn-xl {
+    font-size: 20.16px;
+  }
+
   .btn.btn-primary {
     color: #fff;
     background-color: #086AEC;

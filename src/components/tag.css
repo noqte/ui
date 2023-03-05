@@ -12,6 +12,9 @@
   font-size: theme(fontSize.base);
   border-radius: theme(borderRadius.DEFAULT);
 
+  &-xs {
+    font-size: theme(fontSize.xs);
+  }
   &-sm {
     font-size: theme(fontSize.sm);
   }
@@ -20,6 +23,9 @@
   }
   &-lg {
     font-size: theme(fontSize.lg);
+  }
+  &-xl {
+    font-size: theme(fontSize.xl);
   }
 
   &-dot {

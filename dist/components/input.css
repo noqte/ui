@@ -44,11 +44,11 @@ input::placeholder {
     background-color: #F9FAFB;
   }
 
-.input-field:where(:-moz-read-only) {
+.input-field:where(input:-moz-read-only) {
     cursor: not-allowed;
   }
 
-.input-field:where(:read-only) {
+.input-field:where(input:read-only) {
     cursor: not-allowed;
   }
 
